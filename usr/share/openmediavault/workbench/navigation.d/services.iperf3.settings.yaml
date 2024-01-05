@@ -1,0 +1,8 @@
+version: "1.0"
+type: navigation-item
+data:
+  path: "services.iperf3.settings"
+  text: _("Settings")
+  position: 20
+  icon: "tune"
+  url: "/services/iperf3/settings"

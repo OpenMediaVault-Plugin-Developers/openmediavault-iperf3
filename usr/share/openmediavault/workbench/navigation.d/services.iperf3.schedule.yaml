@@ -1,0 +1,8 @@
+version: "1.0"
+type: navigation-item
+data:
+  path: "services.iperf3.schedule"
+  text: _("Schedule")
+  position: 10
+  icon: mdi:calendar-clock-outline
+  url: "/services/iperf3/schedule"

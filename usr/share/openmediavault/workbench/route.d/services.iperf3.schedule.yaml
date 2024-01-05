@@ -1,0 +1,6 @@
+version: "1.0"
+type: route
+data:
+  url: "/services/iperf3/schedule"
+  title: _("Schedule")
+  component: omv-services-iperf3-schedule-datatable-page

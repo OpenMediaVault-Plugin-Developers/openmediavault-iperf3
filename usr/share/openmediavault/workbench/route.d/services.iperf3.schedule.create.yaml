@@ -1,0 +1,7 @@
+version: "1.0"
+type: route
+data:
+  url: "/services/iperf3/schedule/create"
+  title: _("Create")
+  notificationTitle: _("Created scheduled job.")
+  component: omv-services-iperf3-schedule-form-page

@@ -1,0 +1,5 @@
+openmediavault-iperf3 (7.0) stable; urgency=low
+
+  * Initial release for OMV 7.x
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 05 Jan 2024 14:52:51 -0500

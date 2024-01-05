@@ -1,0 +1,18 @@
+Source: openmediavault-iperf3
+Section: net
+XB-Plugin-Section: network
+Priority: optional
+Maintainer: OpenMediaVault Plugin Developers <plugins@omv-extras.org>
+Build-Depends: debhelper (>= 13)
+Standards-Version: 4.3.0
+Homepage: http://omv-extras.org/
+
+Package: openmediavault-iperf3
+Architecture: all
+Depends: iperf3,
+         openmediavault (>= 7),
+         ${misc:Depends}
+Description: OpenMediaVault iPerf3 plugin
+ iperf3 is a tool for performing network throughput measurements.
+ It can test TCP, UDP, or SCTP throughput.  To perform an iperf3
+ test the user must establish both a server and a client.

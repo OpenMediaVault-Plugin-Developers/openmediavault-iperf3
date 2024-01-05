@@ -1,0 +1,23 @@
+version: "1.0"
+type: component
+data:
+  name: omv-services-iperf3-settings-form-page
+  type: formPage
+  config:
+    request:
+      service: Iperf3
+      get:
+        method: getSettings
+      post:
+        method: setSettings
+    fields:
+      - type: checkbox
+        name: enable
+        label: _("Enable")
+        value: false
+    buttons:
+      - template: submit
+      - template: cancel
+        execute:
+          type: url
+          url: "/services"
