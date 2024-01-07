@@ -20,6 +20,22 @@
       "type": "string",
       "default": ""
     },
+    "reverse": {
+      "type": "boolean",
+      "default": false
+    },
+    "verbose": {
+      "type": "boolean",
+      "default": false
+    },
+    "json": {
+      "type": "boolean",
+      "default": false
+    },
+    "log": {
+      "type": "boolean",
+      "default": false
+    },
     "sendemail": {
       "type": "boolean",
       "default": false

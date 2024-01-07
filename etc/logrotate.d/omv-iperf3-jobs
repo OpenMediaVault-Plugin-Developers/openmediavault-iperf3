@@ -1,0 +1,8 @@
+/var/log/omv-iperf3-jobs.log
+{
+  monthly
+  missingok
+  rotate 12
+  compress
+  notifempty
+}

@@ -29,6 +29,18 @@
               "server": {
                 "type": "string"
               },
+              "reverse": {
+                "type": "boolean"
+              },
+              "verbose": {
+                "type": "boolean"
+              },
+              "json": {
+                "type": "boolean"
+              },
+              "log": {
+                "type": "boolean"
+              },
               "sendemail": {
                 "type": "boolean"
               },

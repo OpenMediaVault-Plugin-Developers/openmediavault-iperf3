@@ -13,6 +13,10 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 @{{ job.execution }}
 {%- endif -%}
 {{ separator }}root iperf3 -c {{ job.server }}
+{%- if job.reverse | to_bool %}{{ separator }}-R{% endif -%}
+{%- if job.verbose | to_bool %}{{ separator }}--verbose{% endif -%}
+{%- if job.json | to_bool %}{{ separator }}--json{% endif -%}
+{%- if job.log | to_bool -%}{{ separator }}| tee -a /var/log/omv-iperf3-jobs.log{%- endif -%}
 {%- if not job.sendemail | to_bool -%}
 {{ separator }}>/dev/null 2>&1
 {%- else -%}

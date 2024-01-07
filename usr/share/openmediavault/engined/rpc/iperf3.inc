@@ -135,8 +135,19 @@ class OMVRpcServiceIperf3 extends \OMV\Rpc\ServiceAbstract
                 $cmdArgs = [];
                 $cmdArgs[] = 'iperf3';
                 $cmdArgs[] = sprintf("-c '%s'", $object->get('server'));
+                if ($object->get('reverse')) {
+                    $cmdArgs[] = '-R';
+                }
+                if ($object->get('verbose')) {
+                    $cmdArgs[] = '--verbose';
+                }
+                if ($object->get('json')) {
+                    $cmdArgs[] = '--json';
+                }
+                if ($object->get('log')) {
+                    $cmdArgs[] = '| tee -a /var/log/omv-iperf3-jobs.log';
+                }
                 $cmd = new \OMV\System\Process($cmdArgs);
-                $cmd->setRedirect2to1();
                 $cmdLine = $cmd->getCommandLine();
                 if (0 !== $this->exec($cmdLine, $output, $bgOutputFilename)) {
                     throw new \OMV\ExecException($cmdLine, $output);

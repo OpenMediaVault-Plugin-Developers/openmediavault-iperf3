@@ -24,6 +24,26 @@ data:
         name: server
         label: _('Server')
         value: ''
+        hint: _('Enter remote iPerf3 server hostname, fqdn, or IP address.')
+      - type: checkbox
+        name: reverse
+        label: _('Reverse')
+        value: false
+        hint: _('Reverse test mode. Server sends, client receives')
+      - type: checkbox
+        name: verbose
+        label: _('Verbose')
+        value: true
+      - type: checkbox
+        name: json
+        label: _('json')
+        value: false
+        hint: _('Output in json format')
+      - type: checkbox
+        name: log
+        label: _('Log')
+        value: true
+        hint: _('Log to file')
       - type: divider
         title: _("Schedule")
       - type: select

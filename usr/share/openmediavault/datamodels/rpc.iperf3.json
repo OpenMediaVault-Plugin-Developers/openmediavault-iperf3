@@ -30,6 +30,22 @@
           "type": "string",
           "required": true
         },
+        "reverse": {
+          "type": "boolean",
+          "required": true
+        },
+        "verbose": {
+          "type": "boolean",
+          "required": true
+        },
+        "json": {
+          "type": "boolean",
+          "required": true
+        },
+        "log": {
+          "type": "boolean",
+          "required": true
+        },
         "sendemail": {
           "type": "boolean",
           "required": true
