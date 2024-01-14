@@ -33,6 +33,7 @@ class OMVRpcServiceIperf3 extends \OMV\Rpc\ServiceAbstract
         $this->registerMethod('setJob');
         $this->registerMethod('deleteJob');
         $this->registerMethod('doJob');
+        $this->registerMethod('getLog');
     }
 
     public function getSettings($params, $context)
@@ -155,5 +156,19 @@ class OMVRpcServiceIperf3 extends \OMV\Rpc\ServiceAbstract
                 return $output;
             }
         );
+    }
+
+    function getLog($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, ["role" => OMV_ROLE_ADMINISTRATOR]);
+        // Create a temporary file which will contain the content of the requested log file.
+        $log = '/var/log/omv-iperf3-jobs.log';
+        // Return values required by generic download RPC implementation.
+        return [
+            'filename' => basename($log),
+            'filepath' => $log,
+            'unlink' => false
+        ];
     }
 }

@@ -93,3 +93,9 @@ data:
                 method: doJob
                 params:
                   uuid: '{{ _selected[0].uuid }}'
+      - type: iconButton
+        icon: mdi:download
+        tooltip: _("Download log")
+        execute:
+          type: url
+          url: '/download?service=Iperf3&method=getLog&params={}'
