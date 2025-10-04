@@ -10,7 +10,7 @@ Homepage: http://omv-extras.org/
 Package: openmediavault-iperf3
 Architecture: all
 Depends: iperf3,
-         openmediavault (>= 7),
+         openmediavault (>= 8),
          ${misc:Depends}
 Description: OpenMediaVault iPerf3 plugin
  iperf3 is a tool for performing network throughput measurements.
