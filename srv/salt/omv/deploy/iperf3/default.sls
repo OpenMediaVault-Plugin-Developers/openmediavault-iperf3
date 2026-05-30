@@ -44,5 +44,5 @@ configure_iperf3_scheduled_backup:
         jobs: {{ jobs | json }}
     - user: root
     - group: root
-    - mode: 644
+    - mode: '0644'
 
